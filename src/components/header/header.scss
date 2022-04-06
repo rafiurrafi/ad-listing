@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    height: 3rem;
+  }
+  &__input-container {
+    flex: 0 0 30%;
+    margin-right: auto;
+    background-color: #f1f1f1;
+  }
+  &__input {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}

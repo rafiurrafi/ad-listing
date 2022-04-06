@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import user from "../../assets/user.png";
+import * as fa from "react-icons/fa";
+import "./header.scss";
 const Header = () => {
   return (
     <div className="header">
@@ -8,29 +10,29 @@ const Header = () => {
         <i className="fa fa-bars"></i>
       </buton>
       <a href="#">
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className="header__logo" />
       </a>
       <div>
         <img src={user} alt="" />
         <span>Join me</span>
       </div>
-      <div>
+      <div className="header__input-container">
         <i className="fa fa-search"></i>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" className="header__input" />
         <i className="fa fa-bars"></i>
       </div>
       <div>
         <button>
-          <i className="fa fa-heart"></i>
+          <fa.FaHeart />
         </button>
         <button>
-          <i className="fa fa-envelope"></i>
+          <fa.FaEnvelope />
         </button>
         <button>
-          <i className="fa fa-bell"></i>
+          <fa.FaBell />
         </button>
         <button>
-          <i className="fa fa-plus"></i>Post your ad
+          <fa.FaPlus /> Post your ad
         </button>
       </div>
     </div>
