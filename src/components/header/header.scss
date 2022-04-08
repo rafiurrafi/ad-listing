@@ -1,14 +1,20 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__logo {
     height: 3rem;
   }
   &__input-container {
     flex: 0 0 30%;
     margin-right: auto;
+    padding: 1.25rem 2rem;
+    border-radius: 0.6rem;
     background-color: #f1f1f1;
+
+    display: flex;
   }
   &__input {
     border: none;
@@ -16,6 +22,15 @@
     background-color: transparent;
     &:focus {
       outline: none;
+    }
+  }
+  &__profile-container {
+    display: flex;
+    align-items: center;
+    img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
     }
   }
 }
