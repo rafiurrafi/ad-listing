@@ -4,6 +4,7 @@ import user from "../../assets/user.png";
 import * as fa from "react-icons/fa";
 import "./header.scss";
 import Container from "../container/container";
+import { IconButton, IconButtonNotification } from "../button/button";
 const Header = () => {
   return (
     <div className="header my-3">
@@ -25,15 +26,18 @@ const Header = () => {
             <i className="fa fa-bars"></i>
           </div>
           <div>
-            <button>
+            <IconButton>
               <fa.FaHeart />
-            </button>
-            <button>
+              <IconButtonNotification>0</IconButtonNotification>
+            </IconButton>
+            <IconButton>
               <fa.FaEnvelope />
-            </button>
-            <button>
+              <IconButtonNotification>0</IconButtonNotification>
+            </IconButton>
+            <IconButton>
               <fa.FaBell />
-            </button>
+              <IconButtonNotification>0</IconButtonNotification>
+            </IconButton>
             <button>
               <fa.FaPlus /> Post your ad
             </button>
