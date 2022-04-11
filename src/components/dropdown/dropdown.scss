@@ -1,0 +1,17 @@
+.dropdown {
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 10rem;
+    height: 0;
+    overflow: hidden;
+    z-index: 2;
+    background-color: red;
+    transition: height 0.4s;
+    &.open {
+      height: 20rem;
+    }
+  }
+}

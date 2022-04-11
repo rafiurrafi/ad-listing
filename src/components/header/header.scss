@@ -33,4 +33,10 @@
       border-radius: 50%;
     }
   }
+  &__icon-container {
+    display: flex;
+    & > * {
+      margin-left: 3rem;
+    }
+  }
 }

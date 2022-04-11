@@ -5,6 +5,7 @@ import * as fa from "react-icons/fa";
 import "./header.scss";
 import Container from "../container/container";
 import { IconButton, IconButtonNotification } from "../button/button";
+import Dropdown from "../dropdown/dropdown";
 const Header = () => {
   return (
     <div className="header my-3">
@@ -25,19 +26,20 @@ const Header = () => {
             <input type="text" placeholder="Search" className="header__input" />
             <i className="fa fa-bars"></i>
           </div>
-          <div>
-            <IconButton>
-              <fa.FaHeart />
-              <IconButtonNotification>0</IconButtonNotification>
-            </IconButton>
-            <IconButton>
-              <fa.FaEnvelope />
-              <IconButtonNotification>0</IconButtonNotification>
-            </IconButton>
-            <IconButton>
-              <fa.FaBell />
-              <IconButtonNotification>0</IconButtonNotification>
-            </IconButton>
+          <div className="header__icon-container">
+            <Dropdown />
+            <div>
+              <IconButton>
+                <fa.FaEnvelope />
+                <IconButtonNotification>0</IconButtonNotification>
+              </IconButton>
+            </div>
+            <div>
+              <IconButton>
+                <fa.FaBell />
+                <IconButtonNotification>0</IconButtonNotification>
+              </IconButton>
+            </div>
             <button>
               <fa.FaPlus /> Post your ad
             </button>

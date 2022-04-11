@@ -13,9 +13,6 @@ export const IconButton = styled.button({
   "&:focus ": {
     outline: "none",
   },
-  "&:not(:first-of-type)": {
-    marginLeft: "3rem",
-  },
   "&:hover": {
     backgroundColor: "blue",
     color: "white",
