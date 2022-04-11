@@ -4,16 +4,19 @@ import user from "../../assets/user.png";
 import * as fa from "react-icons/fa";
 import "./header.scss";
 import Container from "../container/container";
-import { IconButton, IconButtonNotification } from "../button/button";
 import Dropdown from "../dropdown/dropdown";
+import Sidebar from "../sidebar/sidebar";
 const Header = () => {
   return (
     <div className="header my-3">
       <Container>
         <div className="header__content">
-          <button>
-            <i className="fa fa-bars"></i>
-          </button>
+          <div>
+            <button>
+              <i className="fa fa-bars"></i>
+            </button>
+            <Sidebar />
+          </div>
           <a href="#" className="mx-3">
             <img src={logo} alt="" className="header__logo" />
           </a>
@@ -32,6 +35,17 @@ const Header = () => {
                 View all
               </a>
               <div className="dropdown__items">
+                <div className="dropdown__item unread">
+                  <div className="dropdown__item-img">
+                    <img src="" alt="Not found" />
+                    <div className="dropdown__item-active"></div>
+                  </div>
+                  <div className="dropdown__item-content">
+                    <h4>Obaidullah Khan</h4>
+                    <p>Lorem ipsum dolor sit.</p>
+                  </div>
+                  <div className="dropdown__item-unread">12</div>
+                </div>
                 <div className="dropdown__item">
                   <div className="dropdown__item-img">
                     <img src="" alt="Not found" />
