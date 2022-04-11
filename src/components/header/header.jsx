@@ -27,19 +27,42 @@ const Header = () => {
             <i className="fa fa-bars"></i>
           </div>
           <div className="header__icon-container">
-            <Dropdown />
-            <div>
-              <IconButton>
-                <fa.FaEnvelope />
-                <IconButtonNotification>0</IconButtonNotification>
-              </IconButton>
-            </div>
-            <div>
-              <IconButton>
-                <fa.FaBell />
-                <IconButtonNotification>0</IconButtonNotification>
-              </IconButton>
-            </div>
+            <Dropdown iconName={<fa.FaHeart />} notificationNumber={0}>
+              <a href="#" className="view-all-btn">
+                View all
+              </a>
+              <div className="dropdown__items">
+                <div className="dropdown__item">
+                  <div className="dropdown__item-img">
+                    <img src="" alt="Not found" />
+                    <div className="dropdown__item-active"></div>
+                  </div>
+                  <div className="dropdown__item-content">
+                    <h4>Obaidullah Khan</h4>
+                    <p>Lorem ipsum dolor sit.</p>
+                  </div>
+                  <div className="dropdown__item-unread">12</div>
+                </div>
+              </div>
+            </Dropdown>
+            <Dropdown iconName={<fa.FaEnvelope />} notificationNumber={0}>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+              </ul>
+            </Dropdown>
+            <Dropdown iconName={<fa.FaBell />} notificationNumber={0}>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+              </ul>
+            </Dropdown>
             <button>
               <fa.FaPlus /> Post your ad
             </button>

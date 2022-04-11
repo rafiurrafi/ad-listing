@@ -3,15 +3,26 @@
   &__content {
     position: absolute;
     top: 5rem;
-    left: 0;
-    width: 10rem;
+    right: 0;
+    width: 30rem;
     height: 0;
     overflow: hidden;
+    border-radius: 1rem;
     z-index: 2;
-    background-color: red;
-    transition: height 0.4s;
+    box-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: 0.15);
+    transition: height 0.6s;
     &.open {
-      height: 20rem;
+      height: 40rem;
     }
+  }
+  .view-all-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: blue;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: right;
+    display: block;
+    margin: 1rem 2rem;
   }
 }
