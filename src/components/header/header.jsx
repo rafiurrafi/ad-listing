@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import user from "../../assets/user.png";
 import * as fa from "react-icons/fa";
@@ -7,15 +7,16 @@ import Container from "../container/container";
 import Dropdown from "../dropdown/dropdown";
 import Sidebar from "../sidebar/sidebar";
 const Header = () => {
+  const [openSidebar, setOpenSidebar] = useState("none");
   return (
     <div className="header my-3">
       <Container>
         <div className="header__content">
           <div>
-            <button>
+            <button onClick={() => setOpenSidebar("left")}>
               <i className="fa fa-bars"></i>
             </button>
-            <Sidebar />
+            <Sidebar isOpen={openSidebar === "left"} onClose={setOpenSidebar} />
           </div>
           <a href="#" className="mx-3">
             <img src={logo} alt="" className="header__logo" />
