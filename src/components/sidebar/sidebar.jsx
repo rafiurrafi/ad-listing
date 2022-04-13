@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
+import logo from "../../assets/logo.png";
 import "./sidebar.scss";
+
 const Sidebar = ({ isOpen, onClose }) => {
   const ref = useRef(null);
   useClickOutside(ref, () => onClose("none"));
@@ -10,7 +12,9 @@ const Sidebar = ({ isOpen, onClose }) => {
         <button className="sidebar__close" onClick={() => onClose("none")}>
           X
         </button>
-        Sidebar
+        <a href="#">
+          <img src={logo} alt="" className="header__logo" />
+        </a>
       </div>
     </div>
   );

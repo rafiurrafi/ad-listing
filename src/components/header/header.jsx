@@ -5,9 +5,7 @@ import * as fa from "react-icons/fa";
 import "./header.scss";
 import Container from "../container/container";
 import Dropdown from "../dropdown/dropdown";
-import Sidebar from "../sidebar/sidebar";
-const Header = () => {
-  const [openSidebar, setOpenSidebar] = useState("none");
+const Header = ({ setOpenSidebar }) => {
   return (
     <div className="header my-3">
       <Container>
@@ -16,7 +14,6 @@ const Header = () => {
             <button onClick={() => setOpenSidebar("left")}>
               <i className="fa fa-bars"></i>
             </button>
-            <Sidebar isOpen={openSidebar === "left"} onClose={setOpenSidebar} />
           </div>
           <a href="#" className="mx-3">
             <img src={logo} alt="" className="header__logo" />

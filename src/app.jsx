@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./app.scss";
 import Header from "./components/header/header";
+import Sidebar from "./components/sidebar/sidebar";
 
 const App = () => {
+  const [openSidebar, setOpenSidebar] = useState("none");
+
   return (
-    <div className="app">
-      <Header />
+    <div className={`${openSidebar ? "visible" : ""}  app`}>
+      <Header setOpenSidebar={setOpenSidebar} />
+      <Sidebar isOpen={openSidebar === "left"} onClose={setOpenSidebar} />
     </div>
   );
 };
