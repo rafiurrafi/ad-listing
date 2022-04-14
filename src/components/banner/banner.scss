@@ -1,0 +1,27 @@
+.banner {
+  height: 60vh;
+  color: white;
+  background-image: linear-gradient(
+      rgba(rgb(36, 36, 142), 0.5),
+      rgba(#1a1a6c, 0.5)
+    ),
+    url(../../assets/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
