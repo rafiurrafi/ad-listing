@@ -5,6 +5,7 @@ import * as fa from "react-icons/fa";
 import "./header.scss";
 import Container from "../container/container";
 import Dropdown from "../dropdown/dropdown";
+import { PostButton } from "../button/button";
 const Header = ({ setOpenSidebar }) => {
   return (
     <div className="header my-3">
@@ -75,9 +76,9 @@ const Header = ({ setOpenSidebar }) => {
                 <li>E</li>
               </ul>
             </Dropdown>
-            <button>
+            <PostButton>
               <fa.FaPlus /> Post your ad
-            </button>
+            </PostButton>
           </div>
         </div>
       </Container>

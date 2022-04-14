@@ -32,3 +32,28 @@ export const IconButtonNotification = styled.div({
   zIndex: "2",
   border: "1px solid #fff",
 });
+export const PostButton = styled.button({
+  border: "none",
+  color: "white",
+  backgroundColor: "blue",
+  padding: "1.3rem 2rem",
+  cursor: "pointer",
+  borderRadius: ".7rem",
+  fontSize: "inherit",
+  transition: "all .4s",
+  "& > svg": {
+    fontSize: "1.3rem",
+    marginRight: ".7rem",
+  },
+  "&:focus": {
+    outline: "none",
+  },
+  "&:hover": {
+    transform: "translateY(-3px)",
+    boxShadow: "0 1rem 1.2rem rgba(0, 0, 0, .15)",
+  },
+  "&:active": {
+    transform: "translateY(-1px)",
+    boxShadow: "0 .9rem 1rem rgba(0, 0, 0, .25)",
+  },
+});
