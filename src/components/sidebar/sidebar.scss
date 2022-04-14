@@ -55,6 +55,10 @@
     }
     &-content {
       background-color: white;
+      display: none;
+      &.show {
+        display: block;
+      }
       button {
         display: flex;
         align-items: center;

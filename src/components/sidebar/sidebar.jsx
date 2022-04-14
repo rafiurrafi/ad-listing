@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import logo from "../../assets/logo.png";
 import "./sidebar.scss";
+import SidebarDropdown from "./sidebarDropdown";
 
 const Sidebar = ({ isOpen, onClose }) => {
   const ref = useRef(null);
@@ -15,6 +16,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         <a href="#">
           <img src={logo} alt="" className="header__logo" />
         </a>
+        <SidebarDropdown />
       </div>
     </div>
   );

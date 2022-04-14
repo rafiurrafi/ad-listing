@@ -5,16 +5,17 @@ import * as fa from "react-icons/fa";
 import "./header.scss";
 import Container from "../container/container";
 import Dropdown from "../dropdown/dropdown";
-import { PostButton } from "../button/button";
+import { IconButton, PostButton } from "../button/button";
+import HeaderInput from "./headerInput";
 const Header = ({ setOpenSidebar }) => {
   return (
     <div className="header my-3">
       <Container>
         <div className="header__content">
           <div>
-            <button onClick={() => setOpenSidebar("left")}>
+            <IconButton onClick={() => setOpenSidebar("left")}>
               <i className="fa fa-bars"></i>
-            </button>
+            </IconButton>
           </div>
           <a href="#" className="mx-3">
             <img src={logo} alt="" className="header__logo" />
@@ -23,11 +24,7 @@ const Header = ({ setOpenSidebar }) => {
             <img src={user} alt="" className="mr-1" />
             <span>Join me</span>
           </div>
-          <div className="header__input-container">
-            <i className="fa fa-search"></i>
-            <input type="text" placeholder="Search" className="header__input" />
-            <i className="fa fa-bars"></i>
-          </div>
+          <HeaderInput />
           <div className="header__icon-container">
             <Dropdown iconName={<fa.FaHeart />} notificationNumber={0}>
               <a href="#" className="view-all-btn">
