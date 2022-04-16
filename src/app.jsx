@@ -17,6 +17,7 @@ import food from "./assets/food.png";
 import furniture from "./assets/furniture.png";
 import Carousel from "./components/carousel/carousel";
 import Footer from "./components/footer/footer";
+import mobileItems from "./pictures/mobileItems";
 
 const App = () => {
   const [openSidebar, setOpenSidebar] = useState("none");
@@ -53,7 +54,8 @@ const App = () => {
           </CategoryContent>
         </Container>
       </Category>
-      <Carousel />
+      <Carousel title="Mobile" items={mobileItems} />
+      <Carousel title="Electronics" items={mobileItems} />
       <Footer />
       <Sidebar isOpen={openSidebar === "left"} onClose={setOpenSidebar} />
     </div>

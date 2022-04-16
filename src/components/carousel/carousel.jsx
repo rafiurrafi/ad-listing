@@ -3,13 +3,10 @@ import "./carousel.scss";
 import Container from "../container/container";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import img1 from "../../assets/1.jpg";
-import img2 from "../../assets/2.jpg";
-import img3 from "../../assets/3.jpg";
-import img4 from "../../assets/4.jpg";
+
 import * as md from "react-icons/md";
 
-const Carousel = () => {
+const Carousel = ({ title, items }) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -53,34 +50,15 @@ const Carousel = () => {
       <Container>
         <div>
           <div className="carousel__title">
-            <h3>Mobile</h3>
-            <a href="#">show all</a>
+            <h3>{title}</h3>
+            <a href="/path">show all</a>
           </div>
           <Slider {...settings}>
-            <div>
-              <img src={img1} alt="" />
-            </div>
-            <div>
-              <img src={img2} alt="" />
-            </div>
-            <div>
-              <img src={img3} alt="" />
-            </div>
-            <div>
-              <img src={img4} alt="" />
-            </div>
-            <div>
-              <img src={img1} alt="" />
-            </div>
-            <div>
-              <img src={img2} alt="" />
-            </div>
-            <div>
-              <img src={img3} alt="" />
-            </div>
-            <div>
-              <img src={img4} alt="" />
-            </div>
+            {items.map((item) => (
+              <div>
+                <img src={item.img} alt="" />
+              </div>
+            ))}
           </Slider>
         </div>
       </Container>
