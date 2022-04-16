@@ -9,7 +9,7 @@ const Footer = (props) => {
       <Container>
         <Subscriber />
       </Container>
-      <Container className="footer__bottom">
+      <Container className="footer__middle">
         <FooterPart>
           <FooterTitle>Contact Us</FooterTitle>
           <FooterIconMenu>
@@ -46,6 +46,23 @@ const Footer = (props) => {
           <FooterCount number="929,238" text="Registered User" />
           <FooterCount number="242,789" text="Total Ads" />
         </FooterPart>
+      </Container>
+      <Container>
+        <FooterBottom>
+          <FooterBottomText>
+            All Copyrights Reserved © 2021 - Developed by{" "}
+            <a href="#">Mironcoder</a>
+          </FooterBottomText>
+          <FooterBottomIcons>
+            <fa.FaFacebook />
+            <fa.FaTwitter />
+            <fa.FaLinkedin />
+            <fa.FaGooglePlus />
+            <fa.FaPinterest />
+            <fa.FaInstagram />
+            <fa.FaDribbble />
+          </FooterBottomIcons>
+        </FooterBottom>
       </Container>
     </div>
   );
@@ -95,4 +112,13 @@ const FooterCount = ({ number, text }) => {
       <div className="footer__text">{text}</div>
     </div>
   );
+};
+const FooterBottom = ({ children }) => {
+  return <div className="footer__bottom">{children}</div>;
+};
+const FooterBottomText = ({ children }) => {
+  return <div className="footer__bottom-text">{children}</div>;
+};
+const FooterBottomIcons = ({ children }) => {
+  return <div className="footer__bottom-icons">{children}</div>;
 };

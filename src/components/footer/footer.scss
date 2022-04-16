@@ -1,7 +1,7 @@
 .footer {
   padding: 5rem 0;
   background-color: #3b5998;
-  &__bottom {
+  &__middle {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6rem;
@@ -50,6 +50,25 @@
   }
   &__text {
     color: rgb(63, 59, 59);
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gray;
+    padding-top: 2rem;
+    &-text {
+    }
+    &-icons {
+      color: white;
+      font-size: 2.5rem;
+      & > * {
+        cursor: pointer;
+        &:not(:first-child) {
+          margin-left: 2rem;
+        }
+      }
+    }
   }
 }
 .subscriber {
