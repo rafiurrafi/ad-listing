@@ -14,7 +14,7 @@ const CategoryContentStyle = styled.div({
   transition: "all .3s",
   cursor: "pointer",
   "&:hover": {
-    boxShadow: ".5rem 1rem 1.5rem rgba(0, 0, 0, .25)",
+    boxShadow: "0rem 0rem 1.5rem rgba(0, 0, 0, .25)",
   },
 });
 const CategoryImgStyle = styled.img({

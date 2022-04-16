@@ -1,0 +1,51 @@
+.footer {
+  padding: 5rem 0;
+  background-color: #3b5998;
+}
+.subscriber {
+  display: flex;
+  &__left {
+    flex: 0.5;
+    margin-right: 3rem;
+    h3 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #ccc;
+      line-height: 1.4;
+    }
+  }
+  &__right {
+    flex: 0.5;
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+    height: 6rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    input {
+      border: none;
+      padding: 1rem 1.5rem;
+      flex: 0.7;
+      padding: 1rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      height: 4.5rem;
+      border: none;
+      flex: 0.3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: inherit;
+      margin: 0.75rem;
+      svg {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

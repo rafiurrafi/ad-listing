@@ -15,6 +15,8 @@ import electronics from "./assets/electronics.png";
 import fashion from "./assets/fashion.png";
 import food from "./assets/food.png";
 import furniture from "./assets/furniture.png";
+import Carousel from "./components/carousel/carousel";
+import Footer from "./components/footer/footer";
 
 const App = () => {
   const [openSidebar, setOpenSidebar] = useState("none");
@@ -51,6 +53,8 @@ const App = () => {
           </CategoryContent>
         </Container>
       </Category>
+      <Carousel />
+      <Footer />
       <Sidebar isOpen={openSidebar === "left"} onClose={setOpenSidebar} />
     </div>
   );
